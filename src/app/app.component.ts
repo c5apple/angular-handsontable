@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as Handsontable from 'handsontable';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +26,21 @@ export class AppComponent {
     startCols: 5,
     colHeaders: true,
     rowHeaders: true,
-    stretchH: 'all'
+    stretchH: 'all',
+    contextMenu: {
+      items: {
+        'row_above': {
+          name: 'Insert row above this one (custom name)'
+        },
+        'row_below': {},
+        'clear_custom': {
+          name: 'Clear all cells (custom)',
+          callback: function () {
+            this.clear();
+          }
+        }
+      }
+    } as Handsontable.contextMenu.Settings
   };
 
 }
