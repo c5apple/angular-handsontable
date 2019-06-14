@@ -17,4 +17,15 @@ export class AppComponent {
     { id: 7, name: 'Cora Fair', address: 'Sunset Boulevard' },
     { id: 8, name: 'Jack Right', address: 'Michigan Avenue' },
   ];
+
+  id = 'my-custom-id';
+
+  hotSettings: Handsontable.GridSettings = {
+    startRows: 5,
+    startCols: 5,
+    colHeaders: true,
+    rowHeaders: true,
+    stretchH: 'all'
+  };
+
 }
