@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import * as Handsontable from 'handsontable';
+import 'handsontable/languages/ja-JP';
 
 @Component({
   selector: 'app-root',
@@ -42,5 +43,11 @@ export class AppComponent {
       }
     } as Handsontable.contextMenu.Settings
   };
+
+  language = 'en-US';
+  languages: Handsontable.I18n.LanguageDictionary[] = [
+    { languageCode: 'en-US' },
+    { languageCode: 'ja-JP' }
+  ];
 
 }
