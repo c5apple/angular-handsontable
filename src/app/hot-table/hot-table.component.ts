@@ -18,8 +18,7 @@ export class HotTableComponent implements OnInit, OnChanges {
 
   hotSettings: Handsontable.GridSettings = {
     data: [],
-    startRows: 5,
-    startCols: 5,
+    height: 320,
     colHeaders: true,
     rowHeaders: true,
     stretchH: 'all',

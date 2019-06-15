@@ -1,7 +1,5 @@
 <section>
   <h2>Basic Example</h2>
-  <app-hot-table class="hot" [id]="id" [data]="data" [language]="language"></app-hot-table>
-
   <p>
     <label for="languages">Select language:</label>
     <select [(ngModel)]="language">
@@ -12,5 +10,6 @@
   <p><button type="button" (click)="showHotData()">Show dataset</button></p>
   <p><button type="button" (click)="swapHotData()">Swap dataset</button></p>
 
+  <app-hot-table class="hot" [id]="id" [data]="data" [language]="language"></app-hot-table>
 </section>
 <router-outlet></router-outlet>
