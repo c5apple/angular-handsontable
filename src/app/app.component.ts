@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import * as Handsontable from 'handsontable';
 import 'handsontable/languages/ja-JP';
+import { HotTableRegisterer } from '@handsontable/angular';
 
 @Component({
   selector: 'app-root',
@@ -8,21 +9,12 @@ import 'handsontable/languages/ja-JP';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-  dataset: any[] = [
-    { id: 1, name: 'Ted Right', address: 'Wall Street' },
-    { id: 2, name: 'Frank Honest', address: 'Pennsylvania Avenue' },
-    { id: 3, name: 'Joan Well', address: 'Broadway' },
-    { id: 4, name: 'Gail Polite', address: 'Bourbon Street' },
-    { id: 5, name: 'Michael Fair', address: 'Lombard Street' },
-    { id: 6, name: 'Mia Fair', address: 'Rodeo Drive' },
-    { id: 7, name: 'Cora Fair', address: 'Sunset Boulevard' },
-    { id: 8, name: 'Jack Right', address: 'Michigan Avenue' },
-  ];
+  private hotRegisterer = new HotTableRegisterer();
 
   id = 'my-custom-id';
 
   hotSettings: Handsontable.GridSettings = {
+    data: [],
     startRows: 5,
     startCols: 5,
     colHeaders: true,
@@ -50,4 +42,20 @@ export class AppComponent {
     { languageCode: 'ja-JP' }
   ];
 
+  showHotData() {
+    console.log(this.hotRegisterer.getInstance(this.id).getData());
+  }
+
+  swapHotData() {
+    this.hotRegisterer.getInstance(this.id).loadData([
+      { id: 1, name: 'Ted Right', address: 'Wall Street' },
+      { id: 2, name: 'Frank Honest', address: 'Pennsylvania Avenue' },
+      { id: 3, name: 'Joan Well', address: 'Broadway' },
+      { id: 4, name: 'Gail Polite', address: 'Bourbon Street' },
+      { id: 5, name: 'Michael Fair', address: 'Lombard Street' },
+      { id: 6, name: 'Mia Fair', address: 'Rodeo Drive' },
+      { id: 7, name: 'Cora Fair', address: 'Sunset Boulevard' },
+      { id: 8, name: 'Jack Right', address: 'Michigan Avenue' },
+    ]);
+  }
 }
