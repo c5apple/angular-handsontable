@@ -35,7 +35,9 @@ export class HotTableComponent implements OnInit, OnChanges {
           }
         }
       }
-    } as Handsontable.contextMenu.Settings
+    } as Handsontable.contextMenu.Settings,
+    manualColumnResize: true,
+    manualRowResize: true
   };
 
   constructor() { }
