@@ -22,6 +22,7 @@ export class HotTableComponent implements OnInit, OnChanges {
     colHeaders: true,
     rowHeaders: true,
     stretchH: 'all',
+    columnSorting: true,
     contextMenu: {
       items: {
         'row_above': {
