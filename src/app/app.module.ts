@@ -1,14 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HotTableModule } from '@handsontable/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HotTableModule } from '@handsontable/angular';
+import { HotTableComponent } from './hot-table/hot-table.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HotTableComponent
   ],
   imports: [
     BrowserModule,
