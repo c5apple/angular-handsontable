@@ -39,7 +39,7 @@ export class HotTableComponent implements OnInit, OnChanges {
       { data: 'id', title: 'ID', type: 'numeric' },
       { data: 'name.first', title: 'First name' },
       { data: 'name.last', title: 'Last name' },
-      { data: 'ip', title: 'IP', validator: ipValidatorRegexp, allowInvalid: true },
+      { data: 'ip', title: 'IP', className: 'htCenter', validator: ipValidatorRegexp, allowInvalid: true },
       { data: 'email', title: 'E-mail', validator: emailValidator, allowInvalid: false }
     ],
     contextMenu: {
