@@ -36,7 +36,7 @@ export class HotTableComponent implements OnInit, OnChanges {
     stretchH: 'all',
     columnSorting: true,
     columns: [
-      { data: 'id', title: 'ID', type: 'numeric' },
+      { data: 'id', title: 'ID', type: 'numeric', readOnly: true },
       { data: 'name.first', title: 'First name' },
       { data: 'name.last', title: 'Last name' },
       { data: 'ip', title: 'IP', className: 'htCenter', validator: ipValidatorRegexp, allowInvalid: true },
